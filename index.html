@@ -8,6 +8,28 @@
 </head>
 <body>
     <div id="app"></div>
-    <script type="module" src="js/main.js"></script>
+    <script type="module">
+        import { BaseStyles } from './js/components/BaseStyles.js';
+        import { Header } from './js/components/Header.js';
+        import { Hero } from './js/components/Hero.js';
+        import { Spotlight } from './js/components/Spotlight.js';
+        import { Ingredients } from './js/components/Ingredients.js';
+        import { Comparison } from './js/components/Comparison.js';
+        import { Testimonials } from './js/components/Testimonials.js';
+        import { FinalCTA } from './js/components/FinalCTA.js';
+        import { Footer } from './js/components/Footer.js';
+
+        BaseStyles();
+
+        const app = document.getElementById('app');
+        app.insertAdjacentHTML('beforeend', Header());
+        app.insertAdjacentHTML('beforeend', Hero());
+        app.insertAdjacentHTML('beforeend', Spotlight());
+        app.insertAdjacentHTML('beforeend', Ingredients());
+        app.insertAdjacentHTML('beforeend', Comparison());
+        app.insertAdjacentHTML('beforeend', Testimonials());
+        app.insertAdjacentHTML('beforeend', FinalCTA());
+        app.insertAdjacentHTML('beforeend', Footer());
+    </script>
 </body>
 </html>
